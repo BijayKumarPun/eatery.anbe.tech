@@ -12,6 +12,7 @@
 		A5D540AA29BF2DEC005F4C50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5D540A929BF2DEC005F4C50 /* Assets.xcassets */; };
 		A5D540AD29BF2DEC005F4C50 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5D540AC29BF2DEC005F4C50 /* Preview Assets.xcassets */; };
 		A5D540C229C083A9005F4C50 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D540C129C083A9005F4C50 /* SplashView.swift */; };
+		A5D540C429C0C237005F4C50 /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D540C329C0C237005F4C50 /* LaunchScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		A5D540A929BF2DEC005F4C50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A5D540AC29BF2DEC005F4C50 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A5D540C129C083A9005F4C50 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		A5D540C329C0C237005F4C50 /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 				A5D540A929BF2DEC005F4C50 /* Assets.xcassets */,
 				A5D540AB29BF2DEC005F4C50 /* Preview Content */,
 				A5D540C129C083A9005F4C50 /* SplashView.swift */,
+				A5D540C329C0C237005F4C50 /* LaunchScreen.swift */,
 			);
 			path = Eatery;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5D540C429C0C237005F4C50 /* LaunchScreen.swift in Sources */,
 				A5D540A829BF2DEB005F4C50 /* ContentView.swift in Sources */,
 				A5D540A629BF2DEB005F4C50 /* EateryApp.swift in Sources */,
 				A5D540C229C083A9005F4C50 /* SplashView.swift in Sources */,
