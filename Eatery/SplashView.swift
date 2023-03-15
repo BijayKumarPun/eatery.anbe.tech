@@ -14,10 +14,11 @@ struct SplashView: View {
     
     var body: some View {
         if (isActive) {
-            LaunchScreen()
+            OnboardingView()
         } else {
             ZStack{
-                Color(.red)
+            Color(#colorLiteral(red: 0.9580881, green: 0.10593573,
+                                                          blue: 0.3403331637, alpha: 1))
                 VStack {
                     Image(systemName: "carrot.fill")
                         .resizable()
