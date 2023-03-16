@@ -62,7 +62,7 @@ struct pages: View {
             .edgesIgnoringSafeArea(.top)
             .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
             
-            NavigationLink(destination: ContentView(), label: {
+            NavigationLink(destination: HomePageView().navigationBarBackButtonHidden(true), label: {
                 
                 Text("Start")
                     .font(.headline)
@@ -72,7 +72,8 @@ struct pages: View {
                                                     blue: 0.3403331637, alpha: 1)))
                     .cornerRadius(10)
                 
-            })
+            }
+            )
             
             Spacer()
             
