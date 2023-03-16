@@ -50,14 +50,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A5BF1B8929C223F800FBB33E /* Modals */ = {
+		A5BF1B8929C223F800FBB33E /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				A5BF1B8B29C2242500FBB33E /* OnboardingPage.swift */,
 				A5BF1B9329C2E27000FBB33E /* Category.swift */,
 				A5E878FF29C2FEB00063B087 /* FoodItem.swift */,
 			);
-			path = Modals;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		A5BF1B8A29C2240C00FBB33E /* Views */ = {
@@ -93,7 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				A5BF1B8A29C2240C00FBB33E /* Views */,
-				A5BF1B8929C223F800FBB33E /* Modals */,
+				A5BF1B8929C223F800FBB33E /* Models */,
 				A5D540A529BF2DEB005F4C50 /* EateryApp.swift */,
 				A5D540A729BF2DEB005F4C50 /* ContentView.swift */,
 				A5D540A929BF2DEC005F4C50 /* Assets.xcassets */,
