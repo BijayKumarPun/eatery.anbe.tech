@@ -17,12 +17,13 @@ struct SplashView: View {
             OnboardingView()
         } else {
             ZStack{
-            Color(#colorLiteral(red: 0.9580881, green: 0.10593573,
-                                                          blue: 0.3403331637, alpha: 1))
+         
                 VStack {
-                    Image(systemName: "carrot.fill")
+                    Image(systemName: "fork.knife.circle.fill")
                         .resizable()
+                        .foregroundColor(.pink)
                         .frame(width: 80, height: 80)
+
                     
                 }.foregroundColor(.white)
                 
