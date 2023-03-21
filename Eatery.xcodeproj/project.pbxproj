@@ -88,6 +88,7 @@
 				A5248FE329C9DB4700673107 /* URLImageView.swift */,
 				A5E8790129C314EE0063B087 /* CartView.swift */,
 				A5E8790329C315E30063B087 /* CartItemView.swift */,
+				A5248FE329C9DB4700673107 /* URLImageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
