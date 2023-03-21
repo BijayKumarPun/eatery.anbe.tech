@@ -6,9 +6,13 @@
 //
 
 import Foundation
+import SwiftUI
 
 class ViewModel : ObservableObject {
-    @Published var foodItems: [FoodItemNew]  = []
+    @Published var foodItems: [FoodItem]  = []
+    @Published var cartItems: [FoodItem] = []
+    
+    
     func fetch() {
         guard let url = URL(string: "https://63fefa26c5c800a72388f5d2.mockapi.io/getRestaurantItems") else {
             return
@@ -25,7 +29,7 @@ class ViewModel : ObservableObject {
             
             //Convert to JSON
             do {
-                let foodItems = try JSONDecoder().decode([FoodItemNew].self, from: data)
+                let foodItems = try JSONDecoder().decode([FoodItem].self, from: data)
                 
                 DispatchQueue.main.async {
                     self?.foodItems = foodItems
@@ -38,4 +42,37 @@ class ViewModel : ObservableObject {
             
             task.resume()
         }
+    
+
+    func addToCart(foodItem: FoodItem){
+        cartItems.append(foodItem)
+        
+    }
+    
+    
+    func removeFromCart(foodItem: FoodItem ){
+        if let idx = cartItems.firstIndex(of: foodItem){
+            cartItems.remove(at: idx)
+        }
+
+        
+    }
+    
+    func resetCartItem(){
+        cartItems.removeAll()
+    }
+    
+    func getTotalCost() -> Int{
+        var total = 0
+        for item in cartItems {
+            total += item.price
+        }
+        return total
+    }
+    
+    
+    
+    
+    
+    
     }

@@ -18,15 +18,15 @@ struct URLImage: View {
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(height:140)
-                .background(Color.gray)
                 .clipped()
             
         } else {
-            Image("") .frame(width: 130, height: 70)
-                    .background(Color.gray)
-                    .onAppear{
-                        fetchData()
-                    }
+            
+            ProgressView()
+                .frame(height: 140)
+                .onAppear{
+                    fetchData()
+                }
         }
 
     }

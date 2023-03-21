@@ -33,6 +33,7 @@ struct OnboardingView_Previews: PreviewProvider {
 }
 
 struct pages: View {
+    @StateObject var viewModel = ViewModel()
     var body: some View {
         VStack {
             
@@ -62,7 +63,7 @@ struct pages: View {
             .edgesIgnoringSafeArea(.top)
             .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
             
-            NavigationLink(destination: HomePageView().navigationBarBackButtonHidden(true), label: {
+            NavigationLink(destination: HomePageView(viewModel: viewModel ).navigationBarBackButtonHidden(true), label: {
                 
                 Text("Start")
                     .font(.headline)

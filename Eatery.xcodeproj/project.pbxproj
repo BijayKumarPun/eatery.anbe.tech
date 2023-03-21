@@ -9,7 +9,9 @@
 /* Begin PBXBuildFile section */
 		A5248FE229C9DA9D00673107 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5248FE129C9DA9D00673107 /* ViewModel.swift */; };
 		A5248FE429C9DB4700673107 /* URLImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5248FE329C9DB4700673107 /* URLImageView.swift */; };
-		A5BF1B8C29C2242500FBB33E /* OnboardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BF1B8B29C2242500FBB33E /* OnboardingPage.swift */; };
+		A52D9CFA29C9EEA200225095 /* FoodItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D9CF929C9EEA200225095 /* FoodItemDetailView.swift */; };
+		A52D9CFC29CA042F00225095 /* PaymentSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D9CFB29CA042F00225095 /* PaymentSuccessView.swift */; };
+		A5BF1B8C29C2242500FBB33E /* OnboardingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BF1B8B29C2242500FBB33E /* OnboardingItem.swift */; };
 		A5BF1B8E29C22F4200FBB33E /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BF1B8D29C22F4200FBB33E /* HomePageView.swift */; };
 		A5BF1B9029C2D7DD00FBB33E /* CategoryItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BF1B8F29C2D7DD00FBB33E /* CategoryItemView.swift */; };
 		A5BF1B9229C2DD4400FBB33E /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BF1B9129C2DD4400FBB33E /* SearchBar.swift */; };
@@ -29,7 +31,9 @@
 /* Begin PBXFileReference section */
 		A5248FE129C9DA9D00673107 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		A5248FE329C9DB4700673107 /* URLImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImageView.swift; sourceTree = "<group>"; };
-		A5BF1B8B29C2242500FBB33E /* OnboardingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPage.swift; sourceTree = "<group>"; };
+		A52D9CF929C9EEA200225095 /* FoodItemDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItemDetailView.swift; sourceTree = "<group>"; };
+		A52D9CFB29CA042F00225095 /* PaymentSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentSuccessView.swift; sourceTree = "<group>"; };
+		A5BF1B8B29C2242500FBB33E /* OnboardingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingItem.swift; sourceTree = "<group>"; };
 		A5BF1B8D29C22F4200FBB33E /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
 		A5BF1B8F29C2D7DD00FBB33E /* CategoryItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItemView.swift; sourceTree = "<group>"; };
 		A5BF1B9129C2DD4400FBB33E /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
@@ -69,7 +73,7 @@
 		A5BF1B8929C223F800FBB33E /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				A5BF1B8B29C2242500FBB33E /* OnboardingPage.swift */,
+				A5BF1B8B29C2242500FBB33E /* OnboardingItem.swift */,
 				A5BF1B9329C2E27000FBB33E /* Category.swift */,
 				A5E878FF29C2FEB00063B087 /* FoodItem.swift */,
 			);
@@ -85,15 +89,11 @@
 				A5BF1B8F29C2D7DD00FBB33E /* CategoryItemView.swift */,
 				A5BF1B9129C2DD4400FBB33E /* SearchBar.swift */,
 				A5E878FD29C2FDC10063B087 /* FoodItemView.swift */,
-
 				A5248FE329C9DB4700673107 /* URLImageView.swift */,
 				A5E8790129C314EE0063B087 /* CartView.swift */,
 				A5E8790329C315E30063B087 /* CartItemView.swift */,
-				A5248FE329C9DB4700673107 /* URLImageView.swift */,
-
-				A5E8790129C314EE0063B087 /* CartView.swift */,
-				A5E8790329C315E30063B087 /* CartItemView.swift */,
-
+				A52D9CF929C9EEA200225095 /* FoodItemDetailView.swift */,
+				A52D9CFB29CA042F00225095 /* PaymentSuccessView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -214,11 +214,13 @@
 				A5D540A629BF2DEB005F4C50 /* EateryApp.swift in Sources */,
 				A5248FE229C9DA9D00673107 /* ViewModel.swift in Sources */,
 				A5BF1B9429C2E27000FBB33E /* Category.swift in Sources */,
+				A52D9CFA29C9EEA200225095 /* FoodItemDetailView.swift in Sources */,
+				A52D9CFC29CA042F00225095 /* PaymentSuccessView.swift in Sources */,
 				A5E8790229C314EE0063B087 /* CartView.swift in Sources */,
 				A5BF1B9229C2DD4400FBB33E /* SearchBar.swift in Sources */,
 				A5E878FE29C2FDC10063B087 /* FoodItemView.swift in Sources */,
 				A5D540C229C083A9005F4C50 /* SplashView.swift in Sources */,
-				A5BF1B8C29C2242500FBB33E /* OnboardingPage.swift in Sources */,
+				A5BF1B8C29C2242500FBB33E /* OnboardingItem.swift in Sources */,
 				A5E8790029C2FEB00063B087 /* FoodItem.swift in Sources */,
 				A5E8790429C315E30063B087 /* CartItemView.swift in Sources */,
 			);

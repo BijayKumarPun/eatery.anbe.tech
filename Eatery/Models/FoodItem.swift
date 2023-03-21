@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct FoodItemNew : Identifiable, Hashable, Codable {
+struct FoodItem : Identifiable, Hashable, Codable {
     var posDisplayCategoryID: Int
     var item: String
     var description: String
