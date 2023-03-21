@@ -85,10 +85,15 @@
 				A5BF1B8F29C2D7DD00FBB33E /* CategoryItemView.swift */,
 				A5BF1B9129C2DD4400FBB33E /* SearchBar.swift */,
 				A5E878FD29C2FDC10063B087 /* FoodItemView.swift */,
+
 				A5248FE329C9DB4700673107 /* URLImageView.swift */,
 				A5E8790129C314EE0063B087 /* CartView.swift */,
 				A5E8790329C315E30063B087 /* CartItemView.swift */,
 				A5248FE329C9DB4700673107 /* URLImageView.swift */,
+
+				A5E8790129C314EE0063B087 /* CartView.swift */,
+				A5E8790329C315E30063B087 /* CartItemView.swift */,
+
 			);
 			path = Views;
 			sourceTree = "<group>";
