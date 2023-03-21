@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomePageView: View {
+    @StateObject var viewModel = ViewModel()
     var search:String = ""
     
     var body: some View {
@@ -86,10 +87,25 @@ struct HomePageView: View {
                             .padding(.top, 10)
                         
                         
-                        
-                        ForEach( 0 ..< 6){i in
-                            FoodItemView(data: FoodItem(id: 0, categoryId: 1, name: "testname", description: "testDescription", isTaxable: false, imageUrl: "testURL", price: 300))
-                        }
+                            VStack{
+                                
+             
+                            
+                                ForEach( viewModel.foodItems, id:\.self) { foodItem in
+                                    HStack {
+//                                        URLImage(urlString: foodItem.imageUrl)
+//
+//                                        Text(foodItem.item)
+//                                            .bold()
+                                        
+                                        FoodItemView(data: foodItem)
+                                    }.padding(3)
+                                }
+                            }.onAppear{
+                                viewModel.fetch()
+                            }
+                            
+                       
                         
                         
                         

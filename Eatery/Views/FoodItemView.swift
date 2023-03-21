@@ -8,33 +8,27 @@
 import SwiftUI
 
 struct FoodItemView: View {
-    var data: FoodItem
+    var data: FoodItemNew
     var body: some View {
        
         VStack() {
             HStack{
-                Image("food")
-                 .resizable()
-                 .aspectRatio(contentMode: .fill)
-                 .frame( height: 140)
-                 .clipped()
-     
+                URLImage(urlString: data.imageUrl)
             }
-         
+            
             VStack{
                 HStack{
-                    Text("Pepperoni Pizza")
+                    Text(data.item)
                         .lineLimit(1)
                         .bold()
                         .font(.system(size: 18))
-                        
-                        
-                    
                     Spacer()
                     
-                }.padding(EdgeInsets(top: 4, leading: 8, bottom: 0, trailing: 8))
+                }
+                .padding(EdgeInsets(top: 4, leading: 8, bottom: 0, trailing: 8))
+                
                 HStack{
-                    Text("This is a short description and nothing can start this forever")
+                    Text(data.description)
                         .font(.system(size: 14))
                         .lineLimit(3)
                         
@@ -42,21 +36,22 @@ struct FoodItemView: View {
                     
                 }
                 .padding(EdgeInsets(top: 4, leading: 8, bottom: 0, trailing: 8))
+                
                 HStack(){
                     Spacer()
-                    Text("$ 44.0")
+                    Text("$ " + String(data.price))
                         .bold()
                         .font(.system(size: 16))
                         
                     
                     
-                }.padding(EdgeInsets(top: 0, leading: 0, bottom: 8, trailing: 8))
+                }
+                .padding(EdgeInsets(top: 0, leading: 0, bottom: 8, trailing: 8))
                    
             }
          
                
            }
-
            .background(.white)
            .cornerRadius(15)
            .shadow(radius: 1)
@@ -69,6 +64,6 @@ struct FoodItemView: View {
 
 struct FoodItemView_Previews: PreviewProvider {
     static var previews: some View {
-        FoodItemView(data: FoodItem(id: 0, categoryId: 1, name: "testname", description: "testDescription", isTaxable: false, imageUrl: "testURL", price: 300))
+        return FoodItemView(data: FoodItemNew(posDisplayCategoryID: 10, item: "test", description: "test", taxable: false, imageUrl: "test", price: 100, id: "test"))
     }
 }
