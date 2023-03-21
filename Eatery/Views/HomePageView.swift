@@ -8,11 +8,14 @@
 import SwiftUI
 
 struct HomePageView: View {
-    @StateObject var viewModel = ViewModel()
+    @ObservedObject var viewModel: ViewModel
     var search:String = ""
+    @State var isLoading: Bool = true
+    
     
     var body: some View {
-        
+        NavigationView {
+            
             
             
             
@@ -25,12 +28,48 @@ struct HomePageView: View {
                     
                     
                     VStack{
+                  
+                    
+                        
                         
                         ZStack{
                             
+                            
                             LinearGradient(gradient: Gradient(colors: [.pink, .red]), startPoint: .top, endPoint: .bottom)
                             
+                            
+                        
+                            VStack {
+                                
+                                HStack () {
+                                    Image(systemName: "person.crop.circle")
+                                        .resizable()
+                                        .frame(width: 32, height: 32)
+                                        .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
+                                        .foregroundColor(Color.white)
+                                    Spacer()
+                                    NavigationLink(destination: CartView(viewModel: viewModel)){
+                                        
+                                        Image(systemName: "cart.circle.fill")
+                                            .resizable()
+                                            .frame(width: 32, height: 32)
+                                            .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
+                                            .foregroundColor(Color.white)
+                                    }
+                                   
+                                  
+                                        
+                                }
+                                .frame(width: UIScreen.main.bounds.width)
+                                .padding(EdgeInsets(top: 20, leading: 0, bottom: 20, trailing: 0))
+                                    
+                                
+                                
+                                
+                    
                             HStack{
+                                
+                                
                                 VStack (alignment: .leading){
                                     
                                     Text("Hungry?")
@@ -40,17 +79,27 @@ struct HomePageView: View {
                                     
                                         .font(.system(size: 18))
                                 }
-                                .padding(20)
+                                .padding(EdgeInsets(top: 8, leading: 20, bottom: 0, trailing: 20))
                                 Spacer()
                             }
                             .frame(width: UIScreen.main.bounds.width)
                             .foregroundColor(.white)
                             
-                            .padding(20)
-                            SearchBar(search: "")
-                                .padding(.top, 120)
-                        }.frame( width: UIScreen.main.bounds.width,
-                                 height: 220)
+                        
+                                
+                                HStack {
+                                    SearchBar(search: "")
+                                        .padding(EdgeInsets(top: 8, leading: 20, bottom: 8, trailing: 20))
+                                }.frame( width: UIScreen.main.bounds.width)
+                                    
+                                
+                            }.padding(EdgeInsets(top: 32, leading: 0, bottom: 8, trailing: 0))
+                            
+                            
+                                
+                            }
+                    
+                        
                         
                         
                         
@@ -87,25 +136,44 @@ struct HomePageView: View {
                             .padding(.top, 10)
                         
                         
-                            VStack{
-                                
-             
+                        ProgressView()
+                            .onAppear{
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                                    isLoading = false
+                                }}
+                            .opacity(isLoading ? 1: 0)
                             
+                            
+                            
+                            
+                            
+                            
+                        VStack{
+                            
+                           
                                 ForEach( viewModel.foodItems, id:\.self) { foodItem in
-                                    HStack {
-//                                        URLImage(urlString: foodItem.imageUrl)
-//
-//                                        Text(foodItem.item)
-//                                            .bold()
-                                        
+                                    
+                                    
+                                    
+                                    
+                                    
+                
+                                    NavigationLink(destination: FoodItemDetailView(viewModel: viewModel , foodItem : foodItem)) {
                                         FoodItemView(data: foodItem)
-                                    }.padding(3)
+                                    } .buttonStyle(PlainButtonStyle())
+                                    
+                                    
+                                    
+                                    
+                                    
                                 }
+                                
                             }.onAppear{
+                   
                                 viewModel.fetch()
                             }
                             
-                       
+                        }
                         
                         
                         
@@ -113,14 +181,15 @@ struct HomePageView: View {
                         
                         Spacer()
                     }
-                    }
-         
+                }
+                
             }.ignoresSafeArea()
+        }
     }
-}
+
 
 struct HomePageView_Previews: PreviewProvider {
     static var previews: some View {
-        HomePageView()
+        HomePageView(viewModel: ViewModel())
     }
 }

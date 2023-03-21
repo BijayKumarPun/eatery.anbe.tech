@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct FoodItemView: View {
-    var data: FoodItemNew
+    var data: FoodItem
     var body: some View {
        
         VStack() {
@@ -30,12 +30,18 @@ struct FoodItemView: View {
                 HStack{
                     Text(data.description)
                         .font(.system(size: 14))
-                        .lineLimit(3)
                         
                     Spacer()
                     
                 }
-                .padding(EdgeInsets(top: 4, leading: 8, bottom: 0, trailing: 8))
+                .padding(EdgeInsets(top: 2, leading: 8, bottom: 2, trailing: 8))
+                
+                HStack {
+                    Text("Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.")
+                        .foregroundColor(Color.gray)
+                        .font(.system(size: 14))
+                        .padding(EdgeInsets(top: 0, leading: 12, bottom: 0, trailing: 12))
+                }
                 
                 HStack(){
                     Spacer()
@@ -64,6 +70,6 @@ struct FoodItemView: View {
 
 struct FoodItemView_Previews: PreviewProvider {
     static var previews: some View {
-        return FoodItemView(data: FoodItemNew(posDisplayCategoryID: 10, item: "test", description: "test", taxable: false, imageUrl: "test", price: 100, id: "test"))
+        return FoodItemView(data: FoodItem(posDisplayCategoryID: 10, item: "test", description: "test", taxable: false, imageUrl: "test", price: 100, id: "test"))
     }
 }
