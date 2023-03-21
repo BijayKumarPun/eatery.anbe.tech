@@ -36,6 +36,7 @@ struct HomePageView: View {
                             
                             
                             LinearGradient(gradient: Gradient(colors: [.pink, .red]), startPoint: .top, endPoint: .bottom)
+                        
                             
                             
                         
@@ -93,11 +94,13 @@ struct HomePageView: View {
                                 }.frame( width: UIScreen.main.bounds.width)
                                     
                                 
-                            }.padding(EdgeInsets(top: 32, leading: 0, bottom: 8, trailing: 0))
+                            }.padding(EdgeInsets(top: 21, leading: 0, bottom: 8, trailing: 0))
                             
                             
                                 
                             }
+                        
+                       
                     
                         
                         
@@ -180,12 +183,12 @@ struct HomePageView: View {
                         
                         
                         Spacer()
-                    }
                 }
-                
             }.ignoresSafeArea()
+                
         }
     }
+}
 
 
 struct HomePageView_Previews: PreviewProvider {
