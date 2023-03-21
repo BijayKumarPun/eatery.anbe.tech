@@ -7,13 +7,13 @@
 
 import Foundation
 
-struct FoodItem : Identifiable {
-var id: Int
-    var categoryId: Int
-    var name: String
+struct FoodItemNew : Identifiable, Hashable, Codable {
+    var posDisplayCategoryID: Int
+    var item: String
     var description: String
-    var isTaxable: Bool
-    var imageUrl: String
+    var taxable: Bool
+    var imageUrl : String
     var price: Int
+    var id: String
     
 }
