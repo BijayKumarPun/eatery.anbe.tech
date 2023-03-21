@@ -16,10 +16,7 @@ struct CartView: View {
     var body: some View {
       
         ScrollView{
-            HStack{
-
-                Spacer()
-            }.padding(20)
+            
             
             if viewModel.cartItems.isEmpty {
                 Image("empty-cart")
@@ -36,15 +33,20 @@ struct CartView: View {
                 
                 
             } else {
+                HStack{
+                    Text("Cart Items (" + String(viewModel.cartItems.count) + ")")
+                        .font(.system(size: 18))
+                        .bold()
+                        .padding(EdgeInsets(top: 20, leading: 18, bottom: 50, trailing: 18))
+                    Spacer()
+                }
                 
-                Text("Cart")
-                    .font(.system(size: 18))
                 
                 ForEach(viewModel.cartItems){ foodItem in
                     CartItemView(id: foodItem.id, title: foodItem.item, price: foodItem.price, callback: {
                         viewModel.removeFromCart(foodItem: foodItem)
                         
-                    })
+                    }).padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
                 }
                 
                 
@@ -54,20 +56,22 @@ struct CartView: View {
                     Spacer()
                     Text("Total")
                         .bold()
-                        .padding(EdgeInsets(top: 0, leading: 12, bottom: 0, trailing: 0))
+                      
                     
                     
                     
                     Text("$" + String(viewModel.getTotalCost()))
                         .font(.system(size:18))
-                }.padding(EdgeInsets(top: 0, leading: 014, bottom: 0, trailing: 14))
+                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 24))
+                }
+                    
                 
                 if isTransactionProcessing {
                     NavigationLink(destination: PaymentSuccessView(viewModel: viewModel, amount: viewModel.getTotalCost()), isActive:  $isTransactionSuccessful){
                         
              
                     ProgressView()
-                        .padding(EdgeInsets(top: 12, leading: 0, bottom: 0, trailing: 0))
+                        .padding(EdgeInsets(top: 32, leading: 0, bottom: 0, trailing: 0))
                     
                     }
                     
