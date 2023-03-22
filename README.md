@@ -44,3 +44,6 @@ https://user-images.githubusercontent.com/13991373/226785425-1ac79802-0e65-4540-
 ---
 ### License
 <img src="https://img.shields.io/github/license/bijaykumarpun/eatery.anbe.tech"/>
+
+---
+> Some image assets are from <a href="https://www.freepik.com/free-vector/people-with-food-illustration_6990614.htm#query=people%20eating&position=30&from_view=keyword&track=ais">Freepik</a>
