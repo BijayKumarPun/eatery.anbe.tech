@@ -62,7 +62,7 @@ struct HomePageView: View {
                                         
                                 }
                                 .frame(width: UIScreen.main.bounds.width)
-                                .padding(EdgeInsets(top: 20, leading: 0, bottom: 20, trailing: 0))
+                                .padding(EdgeInsets(top: 32, leading: 0, bottom: 20, trailing: 0))
                                     
                                 
                                 
@@ -124,7 +124,7 @@ struct HomePageView: View {
                             }
                         }
                         HStack{
-                            ForEach(0 ..< 4){ i in
+                          ForEach(0 ..< 4){ i in
                                 CategoryItemView(image: CategoryData[i+4].image, categoryName:  CategoryData[i+4].title)
                             }
                             
